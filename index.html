@@ -2,197 +2,134 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>YK Collection</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-*{margin:0;padding:0;box-sizing:border-box}
 body{
-  background:#000;
-  color:#f5f5f5;
-  font-family:'Poppins',sans-serif;
+    margin:0;
+    font-family: "Georgia", serif;
+    background:#000;
+    color:#d4af37;
 }
 header{
-  padding:40px 20px;
-  text-align:center;
-  border-bottom:1px solid #2a2a2a;
+    text-align:center;
+    padding:30px 10px;
+    border-bottom:1px solid #333;
 }
 header h1{
-  font-family:'Playfair Display',serif;
-  color:#d4af37;
-  letter-spacing:4px;
+    letter-spacing:4px;
+    font-size:32px;
 }
 .hero{
-  padding:80px 20px;
-  text-align:center;
+    text-align:center;
+    padding:40px 15px;
 }
 .hero h2{
-  font-family:'Playfair Display',serif;
-  font-size:36px;
-  margin-bottom:15px;
+    color:#fff;
+    font-size:26px;
 }
-.hero p{
-  max-width:700px;
-  margin:auto;
-  color:#bbb;
-  line-height:1.6;
+.section-title{
+    text-align:center;
+    font-size:24px;
+    margin:40px 0 20px;
 }
-
-.section{
-  padding:70px 20px;
-}
-.section h3{
-  text-align:center;
-  font-family:'Playfair Display',serif;
-  color:#d4af37;
-  margin-bottom:40px;
-  font-size:30px;
-}
-
 .products{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:30px;
-  max-width:1100px;
-  margin:auto;
+    display:grid;
+    grid-template-columns:1fr;
+    gap:25px;
+    padding:0 15px 40px;
 }
 .card{
-  background:#0b0b0b;
-  border:1px solid #2a2a2a;
-  border-radius:16px;
-  overflow:hidden;
-  transition:.3s;
-}
-.card:hover{
-  transform:translateY(-6px);
+    background:#0b0b0b;
+    border-radius:14px;
+    overflow:hidden;
+    box-shadow:0 0 20px rgba(212,175,55,0.15);
 }
 .card img{
-  width:100%;
-  height:320px;
-  object-fit:cover;
+    width:100%;
+    display:block;
 }
-.card .info{
-  padding:20px;
+.card-content{
+    padding:20px;
 }
-.card h4{
-  font-family:'Playfair Display',serif;
-  margin-bottom:6px;
+.card-content h3{
+    color:#fff;
+    margin:0 0 8px;
 }
 .price{
-  color:#d4af37;
-  font-weight:600;
-  margin-bottom:12px;
+    font-size:20px;
+    margin-bottom:15px;
 }
 .btn{
-  display:block;
-  text-align:center;
-  padding:12px;
-  background:#d4af37;
-  color:#000;
-  text-decoration:none;
-  border-radius:8px;
-  font-weight:600;
-}
-
-.order{
-  max-width:500px;
-  margin:auto;
-  background:#0b0b0b;
-  border:1px solid #2a2a2a;
-  padding:30px;
-  border-radius:18px;
-}
-.order input, .order select, .order textarea{
-  width:100%;
-  background:#000;
-  border:1px solid #333;
-  padding:12px;
-  margin-bottom:15px;
-  border-radius:8px;
-  color:#fff;
+    display:block;
+    text-align:center;
+    background:#d4af37;
+    color:#000;
+    padding:12px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
 }
 footer{
-  text-align:center;
-  padding:40px 20px;
-  border-top:1px solid #2a2a2a;
-  color:#aaa;
+    text-align:center;
+    padding:30px 10px;
+    border-top:1px solid #333;
+    font-size:14px;
+    color:#aaa;
 }
-footer a{color:#d4af37;text-decoration:none}
+footer a{
+    color:#d4af37;
+    text-decoration:none;
+}
 </style>
 </head>
 
 <body>
 
 <header>
-  <h1>YK COLLECTION</h1>
+    <h1>YK COLLECTION</h1>
 </header>
 
 <section class="hero">
-  <h2>Luxury Kashmiri Handmade Shawls & Suits</h2>
-  <p>Authentic Kashmiri Pashmina, Kani shawls, intricate needle-work embroidery and premium ladies suits — handcrafted in Kashmir.</p>
+    <h2>Luxury Kashmiri Handmade Shawls & Suits</h2>
 </section>
 
-<section class="section">
-  <h3>Our Collection</h3>
+<h2 class="section-title">Our Collection</h2>
 
-  <div class="products">
+<section class="products">
 
+    <!-- SHAWL -->
     <div class="card">
-      <img src="images/pashmina.jpg">
-      <div class="info">
-        <h4>Kashmiri Pashmina Kani Shawl</h4>
-        <div class="price">₹5,000</div>
-        <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I want to order Kashmiri Pashmina Kani Shawl">Order on WhatsApp</a>
-      </div>
+        <img src="images/pashmina.jpg" alt="Kashmiri Pashmina Shawl">
+        <div class="card-content">
+            <h3>Kashmiri Pashmina Kani Shawl</h3>
+            <div class="price">₹5,000</div>
+            <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I want to order Kashmiri Pashmina Kani Shawl" target="_blank">
+                Order on WhatsApp
+            </a>
+        </div>
     </div>
 
+    <!-- SUIT -->
     <div class="card">
-      <img src="images/needle-suit.jpg">
-      <div class="info">
-        <h4>Kashmiri Needle Work Suit</h4>
-        <div class="price">₹1,500</div>
-        <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I want to order Kashmiri Needle Work Suit">Order on WhatsApp</a>
-      </div>
+        <img src="images/suit.jpg" alt="Kashmiri Needle Work Suit">
+        <div class="card-content">
+            <h3>Kashmiri Needle Work Suit</h3>
+            <div class="price">₹1,500</div>
+            <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I want to order Kashmiri Needle Work Suit" target="_blank">
+                Order on WhatsApp
+            </a>
+        </div>
     </div>
 
-  </div>
-</section>
-
-<section class="section">
-  <h3>Order Request</h3>
-
-  <div class="order">
-    <form onsubmit="sendOrder();return false;">
-      <input id="name" placeholder="Full Name" required>
-      <input id="phone" placeholder="WhatsApp Number" required>
-      <select id="product">
-        <option>Pashmina Kani Shawl – ₹5,000</option>
-        <option>Needle Work Suit – ₹1,500</option>
-      </select>
-      <textarea id="note" placeholder="Color / Quantity / Notes"></textarea>
-      <button class="btn" type="submit">Send Order on WhatsApp</button>
-    </form>
-  </div>
 </section>
 
 <footer>
-  <p>Email: <a href="mailto:ykcollectionjk@gmail.com">ykcollectionjk@gmail.com</a></p>
-  <p>Instagram: <a href="https://www.instagram.com/yk_collection_jk">@yk_collection_jk</a></p>
-  <p>© 2026 YK Collection</p>
+    <p>Email: <a href="mailto:ykcollectionjk@gmail.com">ykcollectionjk@gmail.com</a></p>
+    <p>Instagram: <a href="https://www.instagram.com/yk_collection_jk" target="_blank">@yk_collection_jk</a></p>
+    <p>© 2026 YK Collection</p>
 </footer>
-
-<script>
-function sendOrder(){
-  var msg =
-  "Name: "+name.value+
-  "%0APhone: "+phone.value+
-  "%0AProduct: "+product.value+
-  "%0ANote: "+note.value;
-  window.open("https://wa.me/91XXXXXXXXXX?text="+msg);
-}
-</script>
 
 </body>
 </html>
