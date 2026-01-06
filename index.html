@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>YK Collection – Premium Kashmiri Shawls</title>
+<title>YK Collection – Luxury Kashmiri Shawls & Handcrafted Wear</title>
 
-<meta name="description" content="YK Collection offers premium Kashmiri Pashmina shawls. Authentic handmade luxury. Order via WhatsApp.">
+<meta name="description" content="YK Collection – Home of luxury Kashmiri shawls & handcrafted wear. Authentic Pashmina, Kani, Jamawar & heritage handwork. Order via WhatsApp.">
 <meta name="robots" content="index, follow">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -18,45 +18,76 @@ text-align:center;
 }
 
 .container{
-max-width:420px;
+max-width:440px;
 margin:auto;
-padding:15px;
+padding:18px;
 }
 
-h1{
+.brand{
+font-size:28px;
+letter-spacing:1px;
 color:#d4af37;
-margin-bottom:5px;
+margin-top:10px;
 }
 
-.price{
-font-size:32px;
-color:#d4af37;
-margin:15px 0;
-}
-
-.desc{
+.intro{
 font-size:15px;
-line-height:1.6;
-opacity:0.9;
+line-height:1.7;
+opacity:0.92;
+margin:15px 0 25px;
+}
+
+.section-title{
+color:#d4af37;
+margin:25px 0 10px;
+font-size:20px;
+}
+
+ul{
+list-style:none;
+padding:0;
+font-size:14.5px;
+line-height:1.9;
+opacity:0.95;
 }
 
 .slider{
 display:flex;
 overflow-x:auto;
-gap:10px;
+gap:12px;
 scroll-snap-type:x mandatory;
-margin:15px 0;
+margin:20px 0;
 }
 
 .slider img{
 width:100%;
-border-radius:12px;
+border-radius:14px;
 scroll-snap-align:center;
+border:1px solid #333;
 }
 
-input, textarea{
+.product-title{
+font-size:22px;
+color:#d4af37;
+margin-top:10px;
+}
+
+.desc{
+font-size:14.5px;
+line-height:1.6;
+opacity:0.9;
+margin-top:8px;
+}
+
+.price{
+font-size:32px;
+color:#d4af37;
+margin:18px 0;
+}
+
+input{
 width:100%;
-padding:10px;
+padding:11px;
 margin:8px 0;
 border-radius:6px;
 border:none;
@@ -65,7 +96,7 @@ font-size:14px;
 
 button{
 width:100%;
-padding:14px;
+padding:15px;
 background:#d4af37;
 color:#000;
 font-size:18px;
@@ -76,9 +107,10 @@ font-weight:bold;
 }
 
 .footer{
-margin-top:20px;
+margin-top:30px;
 font-size:13px;
 opacity:0.8;
+line-height:1.6;
 }
 </style>
 </head>
@@ -86,7 +118,42 @@ opacity:0.8;
 <body>
 <div class="container">
 
-<h1>Pashmina Kani Shawl</h1>
+<div class="brand">YK COLLECTION</div>
+
+<div class="intro">
+At YK Collection, we curate some of the finest and rarest Kashmiri handcrafts.  
+From everyday elegance to exclusive luxury pieces valued up to ₹1,00,000+,  
+each creation reflects heritage, patience, and master craftsmanship passed  
+down through generations in Kashmir.
+</div>
+
+<div class="section-title">Our Signature Collections</div>
+<ul>
+<li>Kani Stoles</li>
+<li>Kani Shawls</li>
+<li>Pashmina Shawls</li>
+<li>Pashmina Stoles</li>
+<li>Water Pashmina Shawls</li>
+<li>Pari Shawls</li>
+<li>Pari Stoles</li>
+<li>Jamawar Shawls</li>
+<li>Aari Work (Crewel Work) Shawls & Stoles</li>
+<li>Kalamkari Stoles</li>
+<li>Lohi / Chaadar</li>
+<li>Tilla Work Shawls</li>
+<li>Chinaar Pata Shawls</li>
+</ul>
+
+<div class="section-title">Handcrafted Dresses & Wear</div>
+<ul>
+<li>Handwork Tilla Work Suits</li>
+<li>Traditional Woolen Pherans</li>
+<li>Aari Work Pherans</li>
+<li>Luxury Hand-Embroidered Ethnic Wear</li>
+<li>Custom Handmade Pieces on Order</li>
+</ul>
+
+<div class="section-title">Featured Product</div>
 
 <div class="slider">
 <img src="images/shawl1.jpg">
@@ -96,14 +163,16 @@ opacity:0.8;
 <img src="images/shawl5.jpg">
 </div>
 
-<p class="desc">
-Pure Pashmina shawl with traditional Kani & needle work, handmade in Kashmir.  
-A premium winter luxury piece.
-</p>
+<div class="product-title">Pashmina Kani Shawl</div>
+
+<div class="desc">
+Pure Pashmina shawl with traditional Kani & needle work,  
+entirely handmade in Kashmir. A timeless luxury piece  
+crafted for collectors and connoisseurs.
+</div>
 
 <div class="price">₹ 5000</div>
 
-<!-- CUSTOMER DETAILS -->
 <input type="text" id="name" placeholder="Your Name">
 <input type="text" id="address" placeholder="Full Address">
 <input type="email" id="email" placeholder="Gmail ID">
@@ -111,9 +180,10 @@ A premium winter luxury piece.
 <button onclick="orderNow()">Order on WhatsApp</button>
 
 <div class="footer">
-📍 YK Collection <br>
+📍 YK Collection – Kashmir <br>
 📧 ykcollection@gmail.com <br>
-📞 9149501956
+📞 +91 9149501956 <br><br>
+Authentic • Handmade • Heritage Luxury
 </div>
 
 </div>
@@ -126,15 +196,15 @@ let email = document.getElementById("email").value;
 
 let msg =
 "Hello YK Collection%0A%0A"+
-"🧍 Name: "+name+"%0A"+
-"🏠 Address: "+address+"%0A"+
-"📧 Gmail: "+email+"%0A%0A"+
-"🧣 Product: Pashmina Kani Shawl%0A"+
-"💰 Price: ₹5000%0A%0A"+
-"🖼 Image:%0A"+
+"Name: "+name+"%0A"+
+"Address: "+address+"%0A"+
+"Gmail: "+email+"%0A%0A"+
+"Product: Pashmina Kani Shawl%0A"+
+"Price: ₹5000%0A%0A"+
+"Image:%0A"+
 "https://ykcollectionjk.github.io/YK-Collection-/images/shawl1.jpg";
 
-window.open("https://wa.me/919149501956?text="+msg, "_blank");
+window.open("https://wa.me/919149501956?text="+msg,"_blank");
 }
 </script>
 
