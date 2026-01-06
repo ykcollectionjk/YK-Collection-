@@ -7,6 +7,7 @@
 
 <style>
 *{box-sizing:border-box;margin:0;padding:0}
+
 body{
   background:#000;
   color:#d4af37;
@@ -51,11 +52,14 @@ h2{
   margin-bottom:15px;
   font-size:28px;
 }
+
+/* SMALL TEXT – WHITE */
 p{
   text-align:center;
-  color:#c9b56a;
-  line-height:1.6;
+  color:#f5f5f5;
+  line-height:1.7;
   margin-bottom:25px;
+  font-size:15px;
 }
 
 /* SLIDER */
@@ -90,19 +94,26 @@ p{
   width:90%;
   max-width:300px;
   margin:12px auto;
-  padding:12px;
+  padding:13px;
   text-align:center;
   border:1px solid #d4af37;
   color:#d4af37;
   text-decoration:none;
   transition:.3s;
+  font-size:15px;
 }
 .btn:hover{
   background:#d4af37;
   color:#000;
 }
 
-/* SECTION BOX */
+/* ADD TO CART */
+.cart{
+  background:#111;
+  border:1px dashed #d4af37;
+}
+
+/* BOX */
 .box{
   border:1px solid #d4af37;
   padding:30px 20px;
@@ -112,9 +123,17 @@ p{
 /* FOOTER */
 footer{
   border-top:1px solid #d4af37;
-  padding:20px;
+  padding:25px 15px;
   text-align:center;
   font-size:14px;
+  color:#f5f5f5;
+}
+footer a{
+  color:#d4af37;
+  text-decoration:none;
+}
+footer a:hover{
+  text-decoration:underline;
 }
 </style>
 </head>
@@ -150,17 +169,17 @@ Each piece reflects heritage, warmth & timeless elegance.
 
 <p>
 Pure Pashmina shawl with traditional kani & needle work,
-handmade in Kashmir. A premium winter luxury.
+handmade in Kashmir. A premium winter luxury piece.
 </p>
 
 <h2>₹ 5000</h2>
 
-<a class="btn" href="https://wa.me/919149501956" target="_blank">
-Order on WhatsApp
+<a class="btn cart" href="#">
+Add to Cart
 </a>
 
-<a class="btn" href="https://instagram.com/ykcollectionjk" target="_blank">
-Visit Instagram
+<a class="btn" href="https://wa.me/919149501956" target="_blank">
+Order on WhatsApp
 </a>
 </div>
 
@@ -177,11 +196,15 @@ Visit Instagram
 </div>
 
 <p>
-Elegant Kashmiri suits made for comfort & daily luxury.
-Perfect blend of tradition & modern style.
+Elegant Kashmiri suits designed for comfort & daily luxury.
+A perfect blend of tradition & modern style.
 </p>
 
 <h2>₹ 1500</h2>
+
+<a class="btn cart" href="#">
+Add to Cart
+</a>
 
 <a class="btn" href="https://wa.me/919149501956" target="_blank">
 Order on WhatsApp
@@ -191,8 +214,15 @@ Order on WhatsApp
 </div>
 
 <footer>
-📧 ykcollectionjk@gmail.com <br>
-Kashmir | Handmade Luxury Shawls & Suits
+📧 ykcollectionjk@gmail.com <br><br>
+
+📍 Kashmir, India <br><br>
+
+<a href="https://instagram.com/ykcollectionjk" target="_blank">
+Visit us on Instagram — @ykcollectionjk
+</a><br><br>
+
+Handmade Luxury Shawls & Suits
 </footer>
 
 </body>
