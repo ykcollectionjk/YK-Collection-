@@ -2,125 +2,107 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>YK Collection | Luxury Kashmiri Handcrafted</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>YK Collection | Luxury Kashmiri Handmade</title>
 
 <style>
 body{
   margin:0;
   font-family: "Georgia", serif;
   background:#000;
-  color:#f5f5f5;
+  color:#d4af37;
 }
 
+/* HEADER */
 header{
+  padding:20px;
   text-align:center;
-  padding:60px 20px;
-  border-bottom:1px solid #d4af37;
+  border-bottom:1px solid #222;
 }
-
 header h1{
-  color:#d4af37;
-  font-size:42px;
-  letter-spacing:2px;
+  letter-spacing:4px;
+  font-size:26px;
+  margin:0;
 }
 
-header p{
-  max-width:800px;
-  margin:auto;
-  color:#ddd;
-  font-size:16px;
-}
-
-.section{
-  padding:60px 20px;
-}
-
-.section-title{
+/* HERO */
+.hero{
+  background:url("images/hero.jpg") center/cover no-repeat;
+  height:70vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
   text-align:center;
-  color:#d4af37;
+}
+.hero h2{
   font-size:34px;
-  margin-bottom:40px;
+  color:#fff;
+  text-shadow:0 0 20px #000;
 }
 
-.products{
-  max-width:1100px;
+/* SECTION */
+section{
+  padding:40px 20px;
+  max-width:1200px;
   margin:auto;
+}
+section h3{
+  text-align:center;
+  font-size:28px;
+  margin-bottom:30px;
+}
+
+/* PRODUCTS */
+.products{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
 }
-
 .card{
-  background:linear-gradient(145deg,#0b0b0b,#151515);
-  border:1px solid #d4af37;
-  border-radius:18px;
-  padding:25px;
+  background:#0b0b0b;
+  border:1px solid #222;
+  border-radius:14px;
+  overflow:hidden;
+  transition:0.3s;
 }
-
+.card:hover{
+  transform:translateY(-6px);
+}
 .card img{
   width:100%;
-  border-radius:14px;
-  margin-bottom:15px;
+  height:300px;
+  object-fit:cover;
 }
-
-.card h3{
-  color:#d4af37;
-  margin-bottom:10px;
+.card .info{
+  padding:15px;
 }
-
-.card p{
-  font-size:14px;
-  color:#ddd;
-}
-
-.price{
-  margin-top:10px;
-  font-weight:bold;
-  color:#d4af37;
-  font-size:18px;
-}
-
-/* ORDER FORM */
-form{
-  max-width:600px;
-  margin:40px auto 0;
-  background:linear-gradient(145deg,#0b0b0b,#151515);
-  padding:35px;
-  border-radius:20px;
-  border:1px solid #d4af37;
-}
-
-input,select,textarea{
-  width:100%;
-  margin-bottom:15px;
-  padding:14px;
-  background:#000;
-  border:1px solid #333;
-  border-radius:12px;
+.card h4{
+  margin:0 0 10px;
   color:#fff;
-  font-size:14px;
 }
-
+.price{
+  font-size:18px;
+  margin-bottom:12px;
+}
 button{
   width:100%;
-  padding:16px;
-  border:none;
-  border-radius:14px;
+  padding:12px;
   background:#d4af37;
-  color:#000;
+  border:none;
   font-size:16px;
-  font-weight:bold;
   cursor:pointer;
 }
-
-footer{
-  margin-top:80px;
-  text-align:center;
-  padding:30px 15px;
-  border-top:1px solid #d4af37;
-  font-size:14px;
+button:hover{
+  background:#b8962e;
 }
 
+/* FOOTER */
+footer{
+  text-align:center;
+  padding:30px 15px;
+  border-top:1px solid #222;
+  color:#aaa;
+}
 footer a{
   color:#d4af37;
   text-decoration:none;
@@ -132,80 +114,53 @@ footer a{
 
 <header>
   <h1>YK COLLECTION</h1>
-  <p>
-    Luxury Kashmiri handmade shawls, authentic Pashmina, intricate needle-work embroidery,
-    premium ladies suits & stoles — crafted in Kashmir with heritage artistry.
-  </p>
 </header>
 
-<section class="section">
-  <h2 class="section-title">Our Collection</h2>
+<div class="hero">
+  <h2>Luxury Kashmiri Handmade Shawls & Suits</h2>
+</div>
+
+<section>
+  <h3>Our Collection</h3>
 
   <div class="products">
 
     <div class="card">
-      <img src="images/pashmina-kani-shawl.jpg" alt="Pashmina Kani Shawl">
-      <h3>Kashmiri Pashmina Kani Shawl</h3>
-      <p>Authentic handmade Pashmina Kani shawl with traditional needle craftsmanship.</p>
-      <div class="price">₹8,000</div>
+      <img src="images/pashmina.jpg">
+      <div class="info">
+        <h4>Kashmiri Pashmina Kani Shawl</h4>
+        <div class="price">₹8,000</div>
+        <button onclick="order('Pashmina Kani Shawl - ₹8,000')">
+          Order on WhatsApp
+        </button>
+      </div>
     </div>
 
     <div class="card">
-      <img src="images/kashmiri-suit.jpg" alt="Needle Work Suit">
-      <h3>Kashmiri Needle Work Suit</h3>
-      <p>Traditional Kashmiri ladies suit featuring fine needle embroidery.</p>
-      <div class="price">₹1,500</div>
+      <img src="images/needle-suit.jpg">
+      <div class="info">
+        <h4>Kashmiri Needle Work Suit</h4>
+        <div class="price">₹1,500</div>
+        <button onclick="order('Needle Work Suit - ₹1,500')">
+          Order on WhatsApp
+        </button>
+      </div>
     </div>
 
   </div>
 </section>
 
-<section class="section">
-  <h2 class="section-title">Order Request</h2>
-
-  <form onsubmit="sendWhatsApp(); return false;">
-    <input type="text" id="name" placeholder="Full Name" required>
-    <input type="email" id="email" placeholder="Email Address" required>
-    <input type="text" id="phone" placeholder="WhatsApp Number" required>
-
-    <select id="product">
-      <option>Pashmina Kani Shawl – ₹8,000</option>
-      <option>Kashmiri Needle Work Suit – ₹1,500</option>
-    </select>
-
-    <textarea id="details" rows="4" placeholder="Color / Size / Quantity / Notes"></textarea>
-
-    <button type="submit">Send Order on WhatsApp</button>
-  </form>
-</section>
-
 <footer>
-  <p>Email:
-    <a href="mailto:ykcollectionjk@gmail.com">ykcollectionjk@gmail.com</a>
-  </p>
-  <p>Instagram:
-    <a href="https://www.instagram.com/yk_collection_jk" target="_blank">
-      @yk_collection_jk
-    </a>
-  </p>
-  <p>© 2026 YK Collection. All Rights Reserved.</p>
+  <p>Email: <a href="mailto:ykcollectionjk@gmail.com">ykcollectionjk@gmail.com</a></p>
+  <p>Instagram: <a href="https://instagram.com/yk_collection_jk" target="_blank">@yk_collection_jk</a></p>
+  <p>© 2026 YK Collection</p>
 </footer>
 
 <script>
-function sendWhatsApp(){
-  var name=document.getElementById("name").value;
-  var email=document.getElementById("email").value;
-  var phone=document.getElementById("phone").value;
-  var product=document.getElementById("product").value;
-  var details=document.getElementById("details").value;
-
-  var msg =
-    "Name: "+name+
-    "%0AEmail: "+email+
-    "%0AWhatsApp: "+phone+
-    "%0AProduct: "+product+
-    "%0ADetails: "+details;
-
+function order(product){
+  let msg = encodeURIComponent(
+    "Hello YK Collection,%0AI'm interested in:%0A" + product
+  );
   window.open("https://wa.me/91XXXXXXXXXX?text="+msg,"_blank");
 }
 </script>
