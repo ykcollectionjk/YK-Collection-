@@ -6,12 +6,51 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+*{box-sizing:border-box}
 body{
     margin:0;
     font-family: "Georgia", serif;
-    background:#000;
+    background:black;
     color:#d4af37;
+    overflow-x:hidden;
 }
+
+/* WELCOME OVERLAY */
+#welcome{
+    position:fixed;
+    inset:0;
+    background:black;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    z-index:9999;
+    animation:fadeOut 2s ease 2.5s forwards;
+}
+#welcome h1{
+    font-size:32px;
+    letter-spacing:4px;
+    animation:zoomIn 2s ease;
+}
+@keyframes zoomIn{
+    from{opacity:0; transform:scale(0.6)}
+    to{opacity:1; transform:scale(1)}
+}
+@keyframes fadeOut{
+    to{opacity:0; visibility:hidden}
+}
+
+/* SNOW */
+.snow{
+    position:fixed;
+    top:-10px;
+    color:white;
+    font-size:14px;
+    animation:fall linear infinite;
+}
+@keyframes fall{
+    to{transform:translateY(110vh)}
+}
+
 header{
     text-align:center;
     padding:30px 10px;
@@ -19,43 +58,45 @@ header{
 }
 header h1{
     letter-spacing:4px;
-    font-size:32px;
 }
+
 .hero{
     text-align:center;
     padding:40px 15px;
 }
 .hero h2{
-    color:#fff;
+    color:white;
     font-size:26px;
 }
-.section-title{
+
+.section{
     text-align:center;
     font-size:24px;
     margin:40px 0 20px;
 }
+
 .products{
-    display:grid;
-    grid-template-columns:1fr;
-    gap:25px;
     padding:0 15px 40px;
+    display:grid;
+    gap:25px;
 }
+
 .card{
     background:#0b0b0b;
-    border-radius:14px;
+    border-radius:15px;
     overflow:hidden;
-    box-shadow:0 0 20px rgba(212,175,55,0.15);
+    box-shadow:0 0 25px rgba(212,175,55,0.2);
 }
 .card img{
     width:100%;
     display:block;
 }
-.card-content{
+.card-body{
     padding:20px;
 }
-.card-content h3{
-    color:#fff;
-    margin:0 0 8px;
+.card-body h3{
+    color:white;
+    margin:0 0 10px;
 }
 .price{
     font-size:20px;
@@ -63,29 +104,31 @@ header h1{
 }
 .btn{
     display:block;
-    text-align:center;
     background:#d4af37;
-    color:#000;
+    color:black;
+    text-align:center;
     padding:12px;
     border-radius:8px;
     text-decoration:none;
     font-weight:bold;
 }
+
 footer{
     text-align:center;
     padding:30px 10px;
     border-top:1px solid #333;
-    font-size:14px;
     color:#aaa;
+    font-size:14px;
 }
-footer a{
-    color:#d4af37;
-    text-decoration:none;
-}
+footer a{color:#d4af37;text-decoration:none}
 </style>
 </head>
 
 <body>
+
+<div id="welcome">
+    <h1>WELCOME TO YK COLLECTION</h1>
+</div>
 
 <header>
     <h1>YK COLLECTION</h1>
@@ -95,33 +138,31 @@ footer a{
     <h2>Luxury Kashmiri Handmade Shawls & Suits</h2>
 </section>
 
-<h2 class="section-title">Our Collection</h2>
+<div class="section">Our Collection</div>
 
 <section class="products">
 
-    <!-- SHAWL -->
-    <div class="card">
-        <img src="images/pashmina.jpg" alt="Kashmiri Pashmina Shawl">
-        <div class="card-content">
-            <h3>Kashmiri Pashmina Kani Shawl</h3>
-            <div class="price">₹5,000</div>
-            <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I want to order Kashmiri Pashmina Kani Shawl" target="_blank">
-                Order on WhatsApp
-            </a>
-        </div>
+<div class="card">
+    <img src="images/pashmina.jpg">
+    <div class="card-body">
+        <h3>Kashmiri Pashmina Kani Shawl</h3>
+        <div class="price">₹5,000</div>
+        <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I want to order Kashmiri Pashmina Kani Shawl" target="_blank">
+            Order on WhatsApp
+        </a>
     </div>
+</div>
 
-    <!-- SUIT -->
-    <div class="card">
-        <img src="images/suit.jpg" alt="Kashmiri Needle Work Suit">
-        <div class="card-content">
-            <h3>Kashmiri Needle Work Suit</h3>
-            <div class="price">₹1,500</div>
-            <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I want to order Kashmiri Needle Work Suit" target="_blank">
-                Order on WhatsApp
-            </a>
-        </div>
+<div class="card">
+    <img src="images/suit.jpg">
+    <div class="card-body">
+        <h3>Kashmiri Needle Work Suit</h3>
+        <div class="price">₹1,500</div>
+        <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I want to order Kashmiri Needle Work Suit" target="_blank">
+            Order on WhatsApp
+        </a>
     </div>
+</div>
 
 </section>
 
@@ -130,6 +171,18 @@ footer a{
     <p>Instagram: <a href="https://www.instagram.com/yk_collection_jk" target="_blank">@yk_collection_jk</a></p>
     <p>© 2026 YK Collection</p>
 </footer>
+
+<script>
+for(let i=0;i<40;i++){
+    let s=document.createElement("div");
+    s.className="snow";
+    s.innerHTML="❄";
+    s.style.left=Math.random()*100+"vw";
+    s.style.animationDuration=3+Math.random()*5+"s";
+    s.style.opacity=Math.random();
+    document.body.appendChild(s);
+}
+</script>
 
 </body>
 </html>
