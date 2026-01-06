@@ -3,110 +3,123 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>YK Collection | Luxury Kashmiri Handmade</title>
+<title>YK Collection</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Poppins:wght@300;400&display=swap" rel="stylesheet">
 
 <style>
+*{margin:0;padding:0;box-sizing:border-box}
 body{
-  margin:0;
-  font-family: "Georgia", serif;
   background:#000;
-  color:#d4af37;
+  color:#f5f5f5;
+  font-family:'Poppins',sans-serif;
 }
-
-/* HEADER */
 header{
-  padding:20px;
+  padding:40px 20px;
   text-align:center;
-  border-bottom:1px solid #222;
+  border-bottom:1px solid #2a2a2a;
 }
 header h1{
+  font-family:'Playfair Display',serif;
+  color:#d4af37;
   letter-spacing:4px;
-  font-size:26px;
-  margin:0;
 }
-
-/* HERO */
 .hero{
-  background:url("images/hero.jpg") center/cover no-repeat;
-  height:70vh;
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  padding:80px 20px;
   text-align:center;
 }
 .hero h2{
-  font-size:34px;
-  color:#fff;
-  text-shadow:0 0 20px #000;
+  font-family:'Playfair Display',serif;
+  font-size:36px;
+  margin-bottom:15px;
 }
-
-/* SECTION */
-section{
-  padding:40px 20px;
-  max-width:1200px;
+.hero p{
+  max-width:700px;
   margin:auto;
-}
-section h3{
-  text-align:center;
-  font-size:28px;
-  margin-bottom:30px;
+  color:#bbb;
+  line-height:1.6;
 }
 
-/* PRODUCTS */
+.section{
+  padding:70px 20px;
+}
+.section h3{
+  text-align:center;
+  font-family:'Playfair Display',serif;
+  color:#d4af37;
+  margin-bottom:40px;
+  font-size:30px;
+}
+
 .products{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:25px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:30px;
+  max-width:1100px;
+  margin:auto;
 }
 .card{
   background:#0b0b0b;
-  border:1px solid #222;
-  border-radius:14px;
+  border:1px solid #2a2a2a;
+  border-radius:16px;
   overflow:hidden;
-  transition:0.3s;
+  transition:.3s;
 }
 .card:hover{
   transform:translateY(-6px);
 }
 .card img{
   width:100%;
-  height:300px;
+  height:320px;
   object-fit:cover;
 }
 .card .info{
-  padding:15px;
+  padding:20px;
 }
 .card h4{
-  margin:0 0 10px;
-  color:#fff;
+  font-family:'Playfair Display',serif;
+  margin-bottom:6px;
 }
 .price{
-  font-size:18px;
+  color:#d4af37;
+  font-weight:600;
   margin-bottom:12px;
 }
-button{
-  width:100%;
+.btn{
+  display:block;
+  text-align:center;
   padding:12px;
   background:#d4af37;
-  border:none;
-  font-size:16px;
-  cursor:pointer;
-}
-button:hover{
-  background:#b8962e;
+  color:#000;
+  text-decoration:none;
+  border-radius:8px;
+  font-weight:600;
 }
 
-/* FOOTER */
+.order{
+  max-width:500px;
+  margin:auto;
+  background:#0b0b0b;
+  border:1px solid #2a2a2a;
+  padding:30px;
+  border-radius:18px;
+}
+.order input, .order select, .order textarea{
+  width:100%;
+  background:#000;
+  border:1px solid #333;
+  padding:12px;
+  margin-bottom:15px;
+  border-radius:8px;
+  color:#fff;
+}
 footer{
   text-align:center;
-  padding:30px 15px;
-  border-top:1px solid #222;
+  padding:40px 20px;
+  border-top:1px solid #2a2a2a;
   color:#aaa;
 }
-footer a{
-  color:#d4af37;
-  text-decoration:none;
-}
+footer a{color:#d4af37;text-decoration:none}
 </style>
 </head>
 
@@ -116,11 +129,12 @@ footer a{
   <h1>YK COLLECTION</h1>
 </header>
 
-<div class="hero">
+<section class="hero">
   <h2>Luxury Kashmiri Handmade Shawls & Suits</h2>
-</div>
+  <p>Authentic Kashmiri Pashmina, Kani shawls, intricate needle-work embroidery and premium ladies suits — handcrafted in Kashmir.</p>
+</section>
 
-<section>
+<section class="section">
   <h3>Our Collection</h3>
 
   <div class="products">
@@ -129,10 +143,8 @@ footer a{
       <img src="images/pashmina.jpg">
       <div class="info">
         <h4>Kashmiri Pashmina Kani Shawl</h4>
-        <div class="price">₹8,000</div>
-        <button onclick="order('Pashmina Kani Shawl - ₹8,000')">
-          Order on WhatsApp
-        </button>
+        <div class="price">₹5,000</div>
+        <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I want to order Kashmiri Pashmina Kani Shawl">Order on WhatsApp</a>
       </div>
     </div>
 
@@ -141,27 +153,44 @@ footer a{
       <div class="info">
         <h4>Kashmiri Needle Work Suit</h4>
         <div class="price">₹1,500</div>
-        <button onclick="order('Needle Work Suit - ₹1,500')">
-          Order on WhatsApp
-        </button>
+        <a class="btn" href="https://wa.me/91XXXXXXXXXX?text=I want to order Kashmiri Needle Work Suit">Order on WhatsApp</a>
       </div>
     </div>
 
   </div>
 </section>
 
+<section class="section">
+  <h3>Order Request</h3>
+
+  <div class="order">
+    <form onsubmit="sendOrder();return false;">
+      <input id="name" placeholder="Full Name" required>
+      <input id="phone" placeholder="WhatsApp Number" required>
+      <select id="product">
+        <option>Pashmina Kani Shawl – ₹5,000</option>
+        <option>Needle Work Suit – ₹1,500</option>
+      </select>
+      <textarea id="note" placeholder="Color / Quantity / Notes"></textarea>
+      <button class="btn" type="submit">Send Order on WhatsApp</button>
+    </form>
+  </div>
+</section>
+
 <footer>
   <p>Email: <a href="mailto:ykcollectionjk@gmail.com">ykcollectionjk@gmail.com</a></p>
-  <p>Instagram: <a href="https://instagram.com/yk_collection_jk" target="_blank">@yk_collection_jk</a></p>
+  <p>Instagram: <a href="https://www.instagram.com/yk_collection_jk">@yk_collection_jk</a></p>
   <p>© 2026 YK Collection</p>
 </footer>
 
 <script>
-function order(product){
-  let msg = encodeURIComponent(
-    "Hello YK Collection,%0AI'm interested in:%0A" + product
-  );
-  window.open("https://wa.me/91XXXXXXXXXX?text="+msg,"_blank");
+function sendOrder(){
+  var msg =
+  "Name: "+name.value+
+  "%0APhone: "+phone.value+
+  "%0AProduct: "+product.value+
+  "%0ANote: "+note.value;
+  window.open("https://wa.me/91XXXXXXXXXX?text="+msg);
 }
 </script>
 
