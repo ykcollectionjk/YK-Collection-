@@ -147,14 +147,18 @@ footer a {
     <p>Authentic handmade Kashmiri Pashmina Kani shawl.</p>
     <div class="price">Price: ₹8,000</div>
   </div>
-
+<button class="add-cart" onclick="addToCart('Kashmiri Pashmina Kani Shawl',8000)">
+  Add to Cart
+</button>
   <div class="card">
     <img src="images/kashmiri-suit.jpg">
     <h3>Kashmiri Needle Work Suit</h3>
     <p>Traditional Kashmiri ladies suit with fine needle work.</p>
     <div class="price">Price: ₹1,500</div>
   </div>
-
+<button class="add-cart" onclick="addToCart('Kashmiri Needle Work Suit',1500)">
+  Add to Cart
+</button>
 </section>
 
   <div class="card">
@@ -193,12 +197,18 @@ footer a {
     <button type="submit">Send Order on WhatsApp</button>
   </form>
 </section>
-
-<footer>
   <p>Email: <a href="mailto:ykcollectionjk@gmail.com">ykcollectionjk@gmail.com</a></p>
   <p>Instagram: <a href="https://www.instagram.com/yk_collection_jk" target="_blank">@yk_collection_jk</a></p>
   <p>© 2026 YK Collection. All Rights Reserved.</p>
 </footer>
+  <button class="add-cart" onclick="sendWhatsApp()">
+  Order on WhatsApp
+    <footer>
+  <p>Email: <a href="mailto:ykcollectionjk@gmail.com">ykcollectionjk@gmail.com</a></p>
+  <p>Instagram: <a href="https://www.instagram.com/ykcollectionjk">ykcollectionjk</a></p>
+  <p>© 2026 YK Collection. All Rights Reserved.</p>
+    </footer>
+</button>
 
 <script>
 function sendWhatsAppOrder() {
@@ -220,6 +230,32 @@ function sendWhatsAppOrder() {
   window.open("https://wa.me/" + whatsappNumber + "?text=" + message, "_blank");
 }
 </script>
+<script>
+let cart = [];
 
+function addToCart(name, price) {
+  cart.push({name, price});
+  alert(name + " added to cart");
+}
+
+function sendWhatsApp() {
+  if(cart.length === 0){
+    alert("Cart is empty");
+    return;
+  }
+
+  let message = "New Order from YK Collection:%0A";
+  let total = 0;
+
+  cart.forEach((item, index) => {
+    message += (index+1) + ". " + item.name + " - ₹" + item.price + "%0A";
+    total += item.price;
+  });
+
+  message += "%0ATotal: ₹" + total;
+
+  window.open("https://wa.me/91XXXXXXXXXX?text=" + message, "_blank");
+}
+</script>
 </body>
 </html>
