@@ -2,229 +2,141 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>YK Collection | Handmade Luxury</title>
+<title>YK Collection – Premium Kashmiri Shawls</title>
+
+<meta name="description" content="YK Collection offers premium Kashmiri Pashmina shawls. Authentic handmade luxury. Order via WhatsApp.">
+<meta name="robots" content="index, follow">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-*{box-sizing:border-box;margin:0;padding:0}
-
 body{
-  background:#000;
-  color:#d4af37;
-  font-family:Georgia,serif;
+margin:0;
+font-family: 'Georgia', serif;
+background:#000;
+color:#fff;
+text-align:center;
 }
 
-/* WELCOME */
-#welcome{
-  position:fixed;
-  inset:0;
-  background:#000;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  z-index:999;
-  animation:fadeOut 1s ease 3.5s forwards;
-}
-#welcome h1{
-  font-size:32px;
-  letter-spacing:3px;
-  animation:zoom 3s ease;
-}
-@keyframes zoom{
-  from{transform:scale(.8);opacity:0}
-  to{transform:scale(1);opacity:1}
-}
-@keyframes fadeOut{
-  to{opacity:0;visibility:hidden}
-}
-
-/* CONTAINER */
 .container{
-  max-width:900px;
-  margin:auto;
-  padding:40px 20px;
+max-width:420px;
+margin:auto;
+padding:15px;
 }
 
-/* TITLES */
-h2{
-  text-align:center;
-  margin-bottom:15px;
-  font-size:28px;
+h1{
+color:#d4af37;
+margin-bottom:5px;
 }
 
-/* SMALL TEXT – WHITE */
-p{
-  text-align:center;
-  color:#f5f5f5;
-  line-height:1.7;
-  margin-bottom:25px;
-  font-size:15px;
+.price{
+font-size:32px;
+color:#d4af37;
+margin:15px 0;
 }
 
-/* SLIDER */
+.desc{
+font-size:15px;
+line-height:1.6;
+opacity:0.9;
+}
+
 .slider{
-  position:relative;
-  overflow:hidden;
-  border:1px solid #d4af37;
-  margin-bottom:30px;
-}
-.slides{
-  display:flex;
-  animation:slide 20s infinite;
-}
-.slides img{
-  width:100%;
-  flex-shrink:0;
-}
-@keyframes slide{
-  0%{transform:translateX(0)}
-  20%{transform:translateX(0)}
-  25%{transform:translateX(-100%)}
-  45%{transform:translateX(-100%)}
-  50%{transform:translateX(-200%)}
-  70%{transform:translateX(-200%)}
-  75%{transform:translateX(-300%)}
-  100%{transform:translateX(-300%)}
+display:flex;
+overflow-x:auto;
+gap:10px;
+scroll-snap-type:x mandatory;
+margin:15px 0;
 }
 
-/* BUTTONS */
-.btn{
-  display:block;
-  width:90%;
-  max-width:300px;
-  margin:12px auto;
-  padding:13px;
-  text-align:center;
-  border:1px solid #d4af37;
-  color:#d4af37;
-  text-decoration:none;
-  transition:.3s;
-  font-size:15px;
-}
-.btn:hover{
-  background:#d4af37;
-  color:#000;
+.slider img{
+width:100%;
+border-radius:12px;
+scroll-snap-align:center;
 }
 
-/* ADD TO CART */
-.cart{
-  background:#111;
-  border:1px dashed #d4af37;
+input, textarea{
+width:100%;
+padding:10px;
+margin:8px 0;
+border-radius:6px;
+border:none;
+font-size:14px;
 }
 
-/* BOX */
-.box{
-  border:1px solid #d4af37;
-  padding:30px 20px;
-  margin-bottom:50px;
+button{
+width:100%;
+padding:14px;
+background:#d4af37;
+color:#000;
+font-size:18px;
+border:none;
+border-radius:6px;
+cursor:pointer;
+font-weight:bold;
 }
 
-/* FOOTER */
-footer{
-  border-top:1px solid #d4af37;
-  padding:25px 15px;
-  text-align:center;
-  font-size:14px;
-  color:#f5f5f5;
-}
-footer a{
-  color:#d4af37;
-  text-decoration:none;
-}
-footer a:hover{
-  text-decoration:underline;
+.footer{
+margin-top:20px;
+font-size:13px;
+opacity:0.8;
 }
 </style>
 </head>
 
 <body>
-
-<!-- WELCOME -->
-<div id="welcome">
-  <h1>Welcome to<br>YK Collection</h1>
-</div>
-
 <div class="container">
 
-<!-- INTRO -->
-<h2>Handmade Luxury from Kashmir</h2>
-<p>
-We bring you authentic Kashmiri shawls & suits, handcrafted by skilled artisans.
-Each piece reflects heritage, warmth & timeless elegance.
-</p>
-
-<!-- SHAWL -->
-<div class="box">
-<h2>Pashmina Kani Shawl</h2>
+<h1>Pashmina Kani Shawl</h1>
 
 <div class="slider">
-  <div class="slides">
-    <img src="images/shawl1.jpg">
+<img src="images/shawl1.jpg">
 <img src="images/shawl2.jpg">
 <img src="images/shawl3.jpg">
 <img src="images/shawl4.jpg">
 <img src="images/shawl5.jpg">
-  </div>
 </div>
 
-<p>
-Pure Pashmina shawl with traditional kani & needle work,
-handmade in Kashmir. A premium winter luxury piece.
+<p class="desc">
+Pure Pashmina shawl with traditional Kani & needle work, handmade in Kashmir.  
+A premium winter luxury piece.
 </p>
 
-<h2>₹ 5000</h2>
+<div class="price">₹ 5000</div>
 
-<a class="btn cart" href="#">
-Add to Cart
-</a>
+<!-- CUSTOMER DETAILS -->
+<input type="text" id="name" placeholder="Your Name">
+<input type="text" id="address" placeholder="Full Address">
+<input type="email" id="email" placeholder="Gmail ID">
 
-<a class="btn" href="https://wa.me/919149501956" target="_blank">
-Order on WhatsApp
-</a>
-</div>
+<button onclick="orderNow()">Order on WhatsApp</button>
 
-<!-- SUITS -->
-<div class="box">
-<h2>Premium Kashmiri Suits</h2>
-
-<div class="slider">
-  <div class="slides">
-    <img src="suit1.jpg">
-    <img src="suit2.jpg">
-    <img src="suit3.jpg">
-  </div>
-</div>
-
-<p>
-Elegant Kashmiri suits designed for comfort & daily luxury.
-A perfect blend of tradition & modern style.
-</p>
-
-<h2>₹ 1500</h2>
-
-<a class="btn cart" href="#">
-Add to Cart
-</a>
-
-<a class="btn" href="https://wa.me/919149501956" target="_blank">
-Order on WhatsApp
-</a>
+<div class="footer">
+📍 YK Collection <br>
+📧 ykcollection@gmail.com <br>
+📞 9149501956
 </div>
 
 </div>
 
-<footer>
-📧 ykcollectionjk@gmail.com <br><br>
+<script>
+function orderNow(){
+let name = document.getElementById("name").value;
+let address = document.getElementById("address").value;
+let email = document.getElementById("email").value;
 
-📍 Kashmir, India <br><br>
+let msg =
+"Hello YK Collection%0A%0A"+
+"🧍 Name: "+name+"%0A"+
+"🏠 Address: "+address+"%0A"+
+"📧 Gmail: "+email+"%0A%0A"+
+"🧣 Product: Pashmina Kani Shawl%0A"+
+"💰 Price: ₹5000%0A%0A"+
+"🖼 Image:%0A"+
+"https://ykcollectionjk.github.io/YK-Collection-/images/shawl1.jpg";
 
-<a href="https://instagram.com/ykcollectionjk" target="_blank">
-Visit us on Instagram — @ykcollectionjk
-</a><br><br>
-
-Handmade Luxury Shawls & Suits
-</footer>
+window.open("https://wa.me/919149501956?text="+msg, "_blank");
+}
+</script>
 
 </body>
 </html>
