@@ -1,189 +1,166 @@
-<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html><html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YK Collection – Premium Kashmiri Handcrafts</title>
+  <meta name="description" content="YK Collection offers premium Kashmiri shawls, stoles and handcrafted ethnic wear. Authentic luxury handcrafted pieces from Kashmir." />
+  <meta name="robots" content="index, follow" />  <style>
+    body{
+      margin:0;
+      font-family: 'Georgia', serif;
+      background:#0b0b0b;
+      color:#f5f5f5;
+    }
+    header{
+      padding:60px 20px;
+      text-align:center;
+    }
+    header h1{
+      color:#d4af37;
+      letter-spacing:4px;
+      font-size:36px;
+      margin-bottom:20px;
+    }
+    header p{
+      max-width:900px;
+      margin:auto;
+      line-height:1.8;
+      font-size:18px;
+      color:#ddd;
+    }
+    section{
+      padding:60px 20px;
+      max-width:1100px;
+      margin:auto;
+    }
+    h2{
+      color:#d4af37;
+      text-align:center;
+      letter-spacing:2px;
+      margin-bottom:40px;
+    }
+    .product{
+      margin-bottom:70px;
+    }
+    .product h3{
+      text-align:center;
+      font-size:22px;
+      margin-bottom:20px;
+    }
+    .slider{
+      position:relative;
+      overflow:hidden;
+      border-radius:12px;
+      box-shadow:0 10px 40px rgba(0,0,0,0.6);
+    }
+    .slides{
+      display:flex;
+      transition:0.6s ease;
+    }
+    .slides img{
+      width:100%;
+      flex-shrink:0;
+    }
+    .nav{
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      background:rgba(0,0,0,0.6);
+      color:#fff;
+      border:none;
+      font-size:22px;
+      padding:10px 15px;
+      cursor:pointer;
+    }
+    .prev{left:10px;}
+    .next{right:10px;}
+    footer{
+      text-align:center;
+      padding:40px 20px;
+      border-top:1px solid #333;
+      color:#aaa;
+    }
+    footer strong{color:#d4af37;}
+  </style></head>
+<body><header>
+  <h1>YK COLLECTION</h1>
+  <p>
+    At YK Collection, we curate some of the finest and rarest Kashmiri handcrafts. From everyday elegance to exclusive luxury pieces valued up to ₹1,00,000+, each creation reflects heritage, patience, and master craftsmanship passed down through generations in Kashmir.
+  </p>
+</header><section>
+  <h2>Our Signature Collections</h2>  <!-- Example Product -->  <div class="product">
+    <h3>Kani Shawls</h3>
+    <div class="slider" data-index="0">
+      <div class="slides">
+        <img src="images/kani1.jpg" alt="Kani Shawl">
+        <img src="images/kani2.jpg" alt="Kani Shawl">
+        <img src="images/kani3.jpg" alt="Kani Shawl">
+        <img src="images/kani4.jpg" alt="Kani Shawl">
+        <img src="images/kani5.jpg" alt="Kani Shawl">
+      </div>
+      <button class="nav prev">❮</button>
+      <button class="nav next">❯</button>
+    </div>
+  </div>  <div class="product">
+    <h3>Pashmina Shawls</h3>
+    <div class="slider" data-index="0">
+      <div class="slides">
+        <img src="images/pashmina1.jpg">
+        <img src="images/pashmina2.jpg">
+        <img src="images/pashmina3.jpg">
+        <img src="images/pashmina4.jpg">
+        <img src="images/pashmina5.jpg">
+      </div>
+      <button class="nav prev">❮</button>
+      <button class="nav next">❯</button>
+    </div>
+  </div>  <div class="product">
+    <h3>Chinar Pata Shawls</h3>
+    <div class="slider" data-index="0">
+      <div class="slides">
+        <img src="images/chinar1.jpg">
+        <img src="images/chinar2.jpg">
+        <img src="images/chinar3.jpg">
+        <img src="images/chinar4.jpg">
+        <img src="images/chinar5.jpg">
+      </div>
+      <button class="nav prev">❮</button>
+      <button class="nav next">❯</button>
+    </div>
+  </div></section><section>
+  <h2>Handcrafted Dresses & Wear</h2>  <div class="product">
+    <h3>Traditional Woolen Pherans</h3>
+    <div class="slider" data-index="0">
+      <div class="slides">
+        <img src="images/pheran1.jpg">
+        <img src="images/pheran2.jpg">
+        <img src="images/pheran3.jpg">
+        <img src="images/pheran4.jpg">
+        <img src="images/pheran5.jpg">
+      </div>
+      <button class="nav prev">❮</button>
+      <button class="nav next">❯</button>
+    </div>
+  </div>
+</section><footer>
+  <p><strong>YK Collection</strong><br>
+  Premium Kashmiri Handcrafted Shawls & Ethnic Wear<br>
+  Orders via WhatsApp | Instagram
+  </p>
+</footer><script>
+  document.querySelectorAll('.slider').forEach(slider=>{
+    const slides = slider.querySelector('.slides');
+    const imgs = slides.children.length;
+    let index = 0;
 
-<title>YK Collection – Premium Kashmiri Shawls</title>
-<meta name="description" content="YK Collection offers authentic handmade Kashmiri shawls & luxury handcrafted wear. Order via WhatsApp.">
-
-<style>
-body{
-  margin:0;
-  background:#000;
-  color:#eee;
-  font-family: 'Georgia', serif;
-}
-
-.container{
-  max-width:900px;
-  margin:auto;
-  padding:20px;
-}
-
-h1{
-  text-align:center;
-  color:#d4af37;
-  letter-spacing:3px;
-  margin-top:20px;
-}
-
-.intro{
-  text-align:center;
-  line-height:1.8;
-  opacity:0.95;
-  margin:25px 0 40px;
-}
-
-.section-title{
-  color:#d4af37;
-  margin:50px 0 20px;
-  text-align:center;
-  font-size:22px;
-}
-
-ul{
-  list-style:none;
-  padding:0;
-  text-align:center;
-  line-height:2;
-}
-
-.slider{
-  display:flex;
-  gap:12px;
-  overflow-x:auto;
-  scroll-snap-type:x mandatory;
-}
-
-.slider img{
-  width:100%;
-  max-width:320px;
-  border-radius:14px;
-  scroll-snap-align:center;
-}
-
-.product-title{
-  text-align:center;
-  color:#d4af37;
-  font-size:22px;
-  margin-top:20px;
-}
-
-.desc{
-  text-align:center;
-  line-height:1.8;
-  font-size:15px;
-  opacity:0.95;
-}
-
-.price{
-  text-align:center;
-  font-size:28px;
-  color:#d4af37;
-  margin:20px 0;
-}
-
-input{
-  width:100%;
-  padding:14px;
-  margin:10px 0;
-  border-radius:8px;
-  border:none;
-}
-
-.whatsapp{
-  display:block;
-  text-align:center;
-  background:#d4af37;
-  color:#000;
-  padding:15px;
-  border-radius:30px;
-  text-decoration:none;
-  font-weight:600;
-  margin-top:15px;
-}
-
-.contact{
-  text-align:center;
-  margin:50px 0;
-  opacity:0.9;
-  line-height:1.9;
-}
-
-footer{
-  text-align:center;
-  font-size:13px;
-  opacity:0.6;
-  margin-bottom:20px;
-}
-</style>
-</head>
-
-<body>
-
-<div class="container">
-
-<h1>YK COLLECTION</h1>
-
-<p class="intro">
-At YK Collection, we present some of the finest and rarest handmade
-Kashmiri shawls and luxury ethnic wear.  
-From everyday elegance to collector pieces valued up to ₹1,00,000+,
-each creation reflects heritage, patience, and master craftsmanship.
-</p>
-
-<h2 class="section-title">Our Signature Collections</h2>
-<ul>
-<li>Kani Shawls & Stoles</li>
-<li>Pashmina Shawls</li>
-<li>Water Pashmina Shawls</li>
-<li>Pari Shawls & Stoles</li>
-<li>Jamawar Shawls</li>
-<li>Aari Work Shawls</li>
-<li>Lohi / Chaadar</li>
-<li>Chinar Pata Kani Shawls</li>
-</ul>
-
-<h2 class="section-title">Featured Product</h2>
-
-<div class="slider">
-  <img src="shawl1.jpg">
-  <img src="shawl2.jpg">
-  <img src="shawl3.jpg">
-  <img src="shawl4.jpg">
-  <img src="shawl5.jpg">
-</div>
-
-<h3 class="product-title">Chinar Pata Kani Shawl</h3>
-
-<p class="desc">
-Pure handmade Chinar Pata Kani shawl crafted in Kashmir using traditional
-Kani technique. A heritage luxury piece made for collectors and
-connoisseurs who value authenticity.
-</p>
-
-<div class="price">₹ 5,000</div>
-
-<input type="text" placeholder="Your Name">
-<input type="text" placeholder="Full Address">
-<input type="email" placeholder="Gmail ID">
-
-<a class="whatsapp" href="https://wa.me/919149501956" target="_blank">
-Order on WhatsApp
-</a>
-
-<div class="contact">
-<strong>YK Collection – Kashmir</strong><br>
-Email: ykcollection@gmail.com<br>
-WhatsApp: +91 9149501956
-</div>
-
-<footer>
-Authentic • Handmade • Heritage Luxury
-</footer>
-
-</div>
-
-</body>
+    slider.querySelector('.next').onclick = ()=>{
+      index = (index+1)%imgs;
+      slides.style.transform = `translateX(-${index*100}%)`;
+    }
+    slider.querySelector('.prev').onclick = ()=>{
+      index = (index-1+imgs)%imgs;
+      slides.style.transform = `translateX(-${index*100}%)`;
+    }
+  })
+</script></body>
 </html>
